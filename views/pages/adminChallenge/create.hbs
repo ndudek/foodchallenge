@@ -1,0 +1,110 @@
+
+<div class="container">
+
+<form class="form-horizontal" action="/admin/challenges" method="post">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Add new Challenge</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Challenge Name</label>
+            <div class="col-md-4">
+                <input id="name" name="name" type="text" placeholder="Test" value="Test" class="form-control input-md" >
+
+            </div>
+        </div>
+
+        <!-- Multiple Radios -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="display">Display Challenge</label>
+            <div class="col-md-4">
+                <div class="radio">
+                    <label for="display-0">
+                        <input type="radio" name="display" id="display-1" value="true" checked="checked">
+                        True
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="display-1">
+                        <input type="radio" name="display" id="display-0" value="false">
+                        False
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Button -->
+        <!--<div class="form-group">-->
+            <!--<label class="col-md-4 control-label" for="image">Image</label>-->
+            <!--<div class="col-md-4">-->
+                <!--<input id="image" name="image" class="input-file" type="file">-->
+            <!--</div>-->
+         <!--</div>-->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Image url</label>
+            <div class="col-md-4">
+                <input id="img-url" name="img-url" type="text" placeholder="" value="/static/img/" class="form-control input-md" >
+
+            </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">Description</label>
+            <div class="col-md-4">
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+        </div>
+
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="dos">Do's</label>
+            <div class="col-md-4">
+                <textarea class="form-control" id="dos" name="dos"></textarea>
+            </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="donts">Dont's</label>
+            <div class="col-md-4">
+                <textarea class="form-control" id="donts" name="donts"></textarea>
+            </div>
+        </div>
+
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="multiplier">Challenge Multiplier</label>
+            <div class="col-md-4">
+                <input id="multiplier" name="multiplier" type="number" placeholder="" value="1.0" class="form-control input-md">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="duration">Challenge Duration (in days)</label>
+            <div class="col-md-4">
+                <input id="duration" name="duration" type="number" placeholder="7" value="7" class="form-control input-md" >
+
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button class="btn btn-primary" type="submit" value="submit">Submit</button>
+            </div>
+        </div>
+
+
+    </fieldset>
+</form>
+</div>
+

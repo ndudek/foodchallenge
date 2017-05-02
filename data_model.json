@@ -1,0 +1,8 @@
+{
+  user_id: Number,
+  name: String,
+  gender: String,
+  location: String,
+  active_challenge: String,
+  past_challenges: Number
+}

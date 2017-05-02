@@ -1,0 +1,25 @@
+{{#each challenges}}
+    <div class="card">
+        <img class="card-img-top" src="{{this.image-url}}" style="width: 100%;">
+        <div class="card-block">
+
+
+            <h2 class="card-text">Challenge Name: {{this.name}} ({{this.duration}} days)</h2>
+            <h4 class="card-text">Description: {{this.description}}</h4>
+            <p class="card-text">Do's: {{this.dos}}</p>
+            <p class="card-text">Dont's: {{this.donts}}</p>
+
+            <p class="card-text">Do's: {{this.dos}}</p>
+            <p class="card-text">Dont's: {{this.donts}}</p>
+
+
+
+
+
+
+            <button class="btn btn-primary btn-lg" href="#" action="/users/" method="post" role="button" value="{{this}}">Select Challenge</button>
+
+        </div>
+    </div>
+    <br>
+{{/each}}

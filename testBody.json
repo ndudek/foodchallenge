@@ -1,0 +1,152 @@
+{
+  username: "nadjadudek",
+  firstName: "nadja",
+  lastName: "dudek",
+  gender: "f",
+  location: "Lodon",
+  address: {
+    street: "penton place 5, Flat 5",
+    postcode: "SE 17 3DN",
+    city: "London"
+  }
+
+  userChallenges: [
+    {
+      _id: "0430958340958",
+      challengeId: name
+      :
+      String,
+      image: String,
+      description: String,
+      rules: String,
+      display: {
+        type: Boolean,
+        default: true
+      },
+      challengeMultiplier: {
+        type: Number,
+        default: 1.0
+      },
+      durationInDays: {
+        type: Number,
+        default: 7.0
+      },
+      isActive: true,
+      startDate: {
+        type: Date,
+        default: Date
+        .
+        now
+      },
+      endDate: {
+        type: Date,
+        default: Date
+        .
+        now
+      },
+      activityRecords: [
+        Number
+      ],
+      points: Number,
+      challengeCanceled: {
+        type: Boolean,
+        default: false
+      },
+      challengeSuccess: {
+        type: Boolean,
+        default: false
+      }
+    },
+    {
+      _id: "546746574567",
+      name: String,
+      image: String,
+      description: String,
+      rules: String,
+      display: {
+        type: Boolean,
+        default: true
+      },
+      challengeMultiplier: {
+        type: Number,
+        default: 1.0
+      },
+      durationInDays: {
+        type: Number,
+        default: 7.0
+      },
+      isActive: false,
+      startDate: {
+        type: Date,
+        default: Date
+        .
+        now
+      },
+      endDate: {
+        type: Date,
+        default: Date
+        .
+        now
+      },
+      activityRecords: [
+        Number
+      ],
+      points: Number,
+      challengeCanceled: {
+        type: Boolean,
+        default: false
+      },
+      challengeSuccess: {
+        type: Boolean,
+        default: false
+      }
+    },
+    {
+      _id: "sdlfkgjsdfgkl",
+      name: String,
+      image: String,
+      description: String,
+      rules: String,
+      display: {
+        type: Boolean,
+        default: true
+      },
+      challengeMultiplier: {
+        type: Number,
+        default: 1.0
+      },
+      durationInDays: {
+        type: Number,
+        default: 7.0
+      },
+      isActive: {
+        type: Boolean,
+        default: true
+      },
+      startDate: {
+        type: Date,
+        default: Date
+        .
+        now
+      },
+      endDate: {
+        type: Date,
+        default: Date
+        .
+        now
+      },
+      activityRecords: [
+        Number
+      ],
+      points: Number,
+      challengeCanceled: {
+        type: Boolean,
+        default: false
+      },
+      challengeSuccess: {
+        type: Boolean,
+        default: false
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "food-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndudek/food-challenge.git"
+  },
+  "author": "Nadja Dudek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndudek/food-challenge/issues"
+  },
+  "homepage": "https://github.com/ndudek/food-challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.2",
+    "moment": "^2.18.1",
+    "mongoose": "^4.9.5",
+    "mongoose-schema-extend": "^0.2.2"
+  }
+}

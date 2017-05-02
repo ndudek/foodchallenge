@@ -1,0 +1,30 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active">Challenges</li>
+</ol>
+{{#each challenges}}
+    <div class="card">
+        <img class="card-img-top img-fluid" src="{{this.image-url}}" style="width: 100%;">
+        <div class="card-block">
+
+
+            <h3 class="card-text">{{this.name}} ({{this.duration}} days)</h3>
+            <p class="card-text">Description: {{this.description}}</p>
+
+            <p class="alert alert-success"><b>Do's:</b> {{this.dos}}</p>
+            <p class="alert alert-danger"><b>Dont's:</b> {{this.donts}}</p>
+
+
+
+
+
+            <form action="/users/challenge/select/">
+                <button class="btn btn-primary btn-lg" href="#" action="/users/" method="post" role="button" value="{{this._id}}">Select Challenge</button>
+            </form>
+
+        </div>
+    </div>
+    <br>
+{{/each}}
+
+

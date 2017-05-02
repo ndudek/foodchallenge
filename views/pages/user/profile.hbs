@@ -1,0 +1,60 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item">Users</li>
+    <li class="breadcrumb-item active">{{user.username}}</li>
+</ol>
+
+<div class="row">
+
+    <div class="col-4">
+
+
+        <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="/static/img/nadja.jpg" alt="Card image cap" width="100%">
+            <div class="card-block">
+                <h4 class="card-title">{{user.firstName}} {{user.lastName}}</h4>
+                <p class="card-text">{{user.country}}</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-8">
+
+        <div class="card card-outline-primary">
+            <div class="card-block">
+
+
+                <h2 class="card-text">Current Challenge</h2>
+
+
+                <!--<img class="card-img-top" src="{{this.image-url}}" style="width: 100%;">-->
+                <!--<h2 class="card-text">Challenge Name: {{this.name}} ({{this.duration}} days)</h2>-->
+                <!--<h4 class="card-text">Description: {{this.description}}</h4>-->
+                <!--<p class="card-text">Do's: {{this.dos}}</p>-->
+                <!--<p class="card-text">Dont's: {{this.donts}}</p>-->
+
+
+                <!--<p class="card-text">Start Date: {{this.startDate}}</p>-->
+                <!--&lt;!&ndash;<p class="card-text">End Date: {{this.endDate}}</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="card-text">Activity Records: {{this.activityRecords}}</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="card-text">Points: {{this.points}}</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="card-text">Challenge cancelled: {{this.challengeCancelled}}</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="card-text">Challenge success: {{this.challengeSuccess}}</p>&ndash;&gt;-->
+                <!--<p class="card-text">Created at: {{this.createdAt}}</p>-->
+                <!--<p class="card-text">Modified at: {{this.modifiedAt}}</p>-->
+
+                <a class="btn btn-primary btn-lg" href="/users/{{user.username}}/challenge/update" role="button">Update Challenge</a>
+                <a class="btn btn-primary btn-lg" href="/challenges/select" role="button">Select Challenge</a>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+{{session.secret}}
+
