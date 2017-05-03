@@ -13,20 +13,20 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 
-// shows challenge list in userprofile
+// shows challenge list (in userprofile)
 router.get("/select/", (req, res) => {
     Challenge.find(function(err, challenges) {
         if(err) {
             console.log(err);
         } else {
             console.log(challenges);
-            return res.render("pages/challenge/list.hbs", {"challenges": challenges});
+            return res.render("pages/user/list.hbs", {"challenges": challenges});
         }
     });
 });
 
 
-// HBS - User List > get all challenges
+// get all challenges (outside userprofile)
 router.get("/", (req, res) => {
     Challenge.find(function(err, challenges) {
         if(err) {
@@ -40,7 +40,7 @@ router.get("/", (req, res) => {
 });
 
 
-// HBS - Admin View - get challenge by id
+// get challenge by id
 router.get("/:id", (req, res) => {
     let challenge = Challenge.findById(req.params.id, (err, item) => {
         if (err)

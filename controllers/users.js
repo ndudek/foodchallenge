@@ -28,7 +28,6 @@ router.get("/create", (req, res) => {
 // show user profile
 router.get("/:username", (req, res) => {
 
-
     User.findOne({"username": req.params.username}, function(err, user) {
         if(err) {
             console.log(err);
@@ -66,24 +65,14 @@ router.post("/", (req, res) => {
 });
 
 
-// add challenge to a user profile v2
-router.post("/:username/challenge/select", (req, res) => {
-
-});
 
 // add challenge to a user profile v2
-router.get("/:username/challenge/update", (req, res) => {
-
-    console.log(req.session);
-    res.render("pages/user/updateChallenge.hbs", {"username": req.params.username});
-});
-
-
-
-
-// add challenge to a user profile v2
-router.post("/update", (req, res) => {
-    User.update({"username": req.params.username}, {$push: {
+router.post("/update/", (req, res) => {
+    console.log("it works", req.params.username);
+    //Get the user find by name or id
+    // let user = User.findOne({"username": req.params.username});
+    //Gte the
+    User.update({username: "nadjadudek"}, {$push: {
         "userChallenges" : [{
             "name": req.body.name,
             "description": req.body.description,
@@ -91,17 +80,17 @@ router.post("/update", (req, res) => {
             "donts": req.body.donts,
             "multiplier": req.body.multiplier,
             "duration": req.body.duration,
-            "createdAt": req.boy.createdAt,
+            "createdAt": req.body.createdAt,
             "modifiedAt": req.body.modifiedAt
         }]
     }}, function(err, updatedItem){
-        if(err)
-            console.log(err);
-        let addStuff = `/users/${updatedItem.body}`;
-        console.log(addStuff);
-        console.log(JSON.stringify(addStuff));
-
-        return res.render("pages/user/view.hbs", {"addStuff": addStuff, "session": req.session});
+        console.log(updatedItem);
+        //     console.log(err);
+        // let addStuff = `/users/${updatedItem.body}`;
+        // console.log(addStuff);
+        // console.log(JSON.stringify(addStuff));
+        //
+        // return res.render("pages/user/list.hbs", {"addStuff": addStuff, "session": req.session});
 
         // _______HELPERS_____
         // query.findOneAndUpdate(conditions, update, callback) // executes
@@ -116,6 +105,22 @@ router.post("/update", (req, res) => {
     });
 });
 
+// add challenge to a user profile v2
+router.post("/:username/challenge/select", (req, res) => {
+
+
+});
+
+
+// add challenge to a user profile v2
+router.get("/:username/challenge/update", (req, res) => {
+
+    console.log(req.session);
+    res.render("pages/user/updateChallenge.hbs", {"username": req.params.username});
+});
+
+
+//
 router.put("/:username", (req, res) => {
     var user = User.findById(req.params.username, (err, item) => {
         if (err) {

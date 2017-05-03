@@ -7,12 +7,7 @@ const Schema = mongoose.Schema;
 
 
 //user challenge table
-//calvin
 const challengeSchema = require("./challenge.js").schema;
-
-//nadja
-// const challengeSchema = require("./challenge.js").extend;
-
 
 
 const userChallengeSchema = challengeSchema.extend({
@@ -40,15 +35,12 @@ const userSchema = new Schema({
     gender: String,
     country: String,
     userChallenges: {
-        type: [userChallengeSchema],
-        default: [] },
+        type: [userChallengeSchema], default: [] },
     createdAt: {
-        type: Date,
-        default: Date.now
+        type: Date, default: Date.now
     },
     updatedAt: {
-        type: Date,
-        default: Date.now
+        type: Date, default: Date.now
     }
 }, { collection: 'users' });
 

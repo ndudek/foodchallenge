@@ -150,3 +150,37 @@
     }
   ]
 }
+
+
+// add challenge to a user profile v2
+//router.post("/update/:username", (req, res) => {
+//
+//console.log("it works", req.params.username);
+////Get the user find by name or id
+//user = User.findOne({"username": req.params.username}, function(err, user) {
+//if (err) {
+//console.log(err);
+//} else {
+//console.log(user);
+////Get the challenge from the button
+//
+////     //Update the user challenge array or push (the challenge Id)
+//
+//
+//}
+//});
+//});
+//
+//// add challenge to a user profile v2
+//router.post("/update/:username", (req, res) => {
+//console.log("it works", req.params.username);
+////Get the user find by name or id
+//user = User.findOne({"username": req.params.username}, function(err, user) {
+//if(err) {
+//console.log(err);
+//} else {
+//console.log(user);
+////Get the challenge from the button
+//
+//
+////Update the user challenge array or push (the challenge Id)

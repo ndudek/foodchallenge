@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 
 
 
+
+
 // set default views directory
 app.set("views", path.join(__dirname, "views"));
 
@@ -41,10 +43,12 @@ db.once('open', function() {
 
 
 
+
 // add controllers
 const users = require("./controllers/users.js");
 const challenges = require("./controllers/challenges.js");
 const adminChallenges = require("./controllers/adminChallenges.js");
+
 
 
 app.get("/", (req, res) => {
@@ -60,7 +64,8 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 // routing controllers (route / resource)
 app.use("/users", users);
 app.use("/challenges", challenges);
-// app.use("/admin/challenges", adminChallenges);
+app.use("/admin/challenges", adminChallenges);
+
 
 
 
